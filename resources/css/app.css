@@ -1,0 +1,53 @@
+.qs{
+    font-family: 'Quicksand', sans-serif;
+}
+.qs-white{
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+}
+.sy{
+    font-family: 'Satisfy', cursive;
+}
+.sy-white{
+    font-family: 'Satisfy', cursive;
+    color: #fff;
+}
+.sy-color{
+    color: #A9661F;
+}
+.qs-outline{
+    color: #A9661F;
+    border-radius: 0;
+    border-color: black;
+}
+.qs-outline:hover{
+    background-color: #A9661F;
+    color: #fff;
+    border: none
+}
+.qs-outline-white{
+    color: #fff;
+    border-radius: 0;
+    border-color: white;
+}
+.qs-outline-white:hover{
+    background-color: #fff;
+    color: black;
+    border: none
+}
+.qs-outline-black{
+    color: black;
+    border-radius: 0;
+    border-color: black;
+}
+.qs-outline-black:hover{
+    background-color: black;
+    color: white;
+    border: none
+}
+.bg-cream{
+    background-color: #D9BCA6;
+}
+.btn-circle{
+    border-radius: 10px;
+}
