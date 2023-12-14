@@ -28,3 +28,7 @@ Route::get('/mainpage', function () {
 Route::get('/itempage', function () {
     return view('itempage');
 });
+
+Route::get('/profilepage', function () {
+    return view('profilepage');
+});
