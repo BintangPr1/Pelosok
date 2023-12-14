@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AuthController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,22 +18,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/mainpage', [MainController::class, 'index'])->name('main');
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/profilepage', [ProfileController::class, 'index'])->name('profile');
 });
 
-Route::get('/homepage', function () {
-    return view('homepage');
-});
 
-Route::get('/mainpage', function () {
-    return view('mainpage');
-});
 
-Route::get('/itempage', function () {
-    return view('itempage');
-});
+Route::get('/register', [AuthController::class, 'register'])->name('register');
 
-Route::get('/profilepage', function () {
-    return view('profilepage');
-});
+Route::post('/register', [AuthController::class, 'registerpost'])->name('register.post');
+
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+
+Route::post('/login', [AuthController::class, 'loginpost'])->name('login.post');
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+

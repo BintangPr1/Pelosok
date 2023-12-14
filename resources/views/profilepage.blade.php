@@ -11,8 +11,8 @@
   <div class="card-body">
     <img class="rounded-circle float-start" src="/images/sugiono.png" alt="">
     <div>
-      <h5 class="card-text text-center">Name : Sugiono</h5>
-      <h5 class="card-text text-center">E-Mail : sugionoganteng123@gmail.com</h5>
+      <h5 class="card-text text-center">{{ auth()->user()->name }}</h5>
+      <h5 class="card-text text-center">{{ auth()->user()->email }}</h5>
       <h5 class="card-text text-center">Tanggal Lahir : 2003/04/20</h5>
     </div>
     <a href="#" class="btn btn-outline-dark float-end">Edit</a>

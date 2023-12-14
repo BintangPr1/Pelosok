@@ -18,9 +18,9 @@
                     in every stitch, wear your traditions with pride
                 </p>
             </div>
-            <button type="button" class="btn qs-outline fw-bold">
+            <a href="{{ route('main') }}"><button type="button" class="btn qs-outline fw-bold">
                 Explore
-            </button>
+            </button></a>
         </div>
         <div class="col-md-6 offset-1 p-0">
             <img style="width: 100%; height: 100vh;" src="{{ url('images/homepage-1.png')}}" class="img-fluid">

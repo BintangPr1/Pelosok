@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+  }
+  
+  .wrapper {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #000000; /* Add this line for the border */
+  }
+  
+  .corner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 10px; /* Adjust the margin as needed */
+    z-index: 1; /* Ensure the image appears above the form */
+    transform: translateX(-60px) translateY(-70px) rotate(-20deg);
+  }
+
+  .corner-image2 {
+    position: absolute;
+    top: 0;
+    right: 0; /* Update left to right */
+    width: 170px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 10px; /* Adjust the margin as needed */
+    z-index: 1; /* Ensure the image appears above the form */
+    transform: translateX(65px) translateY(-80px) rotate(-100deg); /* Update translateX */
+  }
+  
+  
+  .wrapper h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Satisfy', sans-serif;
+  }
+  
+
+.wrapper form{
+  margin-top: 30px;
+}
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #d9bca6;
+}
+form .policy{
+  display: flex;
+  align-items: center;
+}
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #e8c9b2;
+  cursor: pointer;
+}
+.input-box.button input:hover{
+  background: #d9bca6;
+}
+form .text h3{
+ color: #333;
+ width: 100%;
+ text-align: center;
+}
+form .text h3 a{
+  color: #d9bca6;
+  text-decoration: none;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+}
