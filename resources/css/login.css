@@ -24,29 +24,29 @@
     padding: 34px;
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    border: 1px solid #000000; /* Add this line for the border */
+    border: 1px solid #000000; 
   }
   
   .corner-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-    margin: 10px; /* Adjust the margin as needed */
-    z-index: 1; /* Ensure the image appears above the form */
+    width: 150px; 
+    height: auto;
+    margin: 10px; 
+    z-index: 1; 
     transform: translateX(-60px) translateY(-70px) rotate(-20deg);
   }
 
   .corner-image2 {
     position: absolute;
     top: 0;
-    right: 0; /* Update left to right */
-    width: 170px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-    margin: 10px; /* Adjust the margin as needed */
-    z-index: 1; /* Ensure the image appears above the form */
-    transform: translateX(65px) translateY(-80px) rotate(-100deg); /* Update translateX */
+    right: 0;
+    width: 170px; 
+    height: auto;
+    margin: 10px; 
+    z-index: 1; 
+    transform: translateX(65px) translateY(-80px) rotate(-100deg); 
   }
   
   

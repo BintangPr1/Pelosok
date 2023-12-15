@@ -150,7 +150,7 @@
 <div class="container2">
   <main class="grid">
   
-    <div class="card product-card" data-gender="men" data-price="1.5m">
+    <div class="card product-card" data-gender="men" data-price="1.5m" data-item="palembang">
       <div class="image">
         <img src="/images/card1.png" width="200px" height="200px" alt="">
       </div>
@@ -160,7 +160,7 @@
     </div>
 
   
-    <div class="card product-card" data-gender="women" data-price="2.5m">
+    <div class="card product-card" data-gender="women" data-price="2.5m" data-item="bali">
       <div class="image">
         <img src="/images/card2.png" width="200px" height="200px" alt="">
       </div>
@@ -170,7 +170,7 @@
     </div>
 
    
-    <div class="card product-card" data-gender="women" data-price="2.5m">
+    <div class="card product-card" data-gender="women" data-price="2.5m" data-item="jambi">
       <div class="image">
         <img src="/images/card3.png" width="200px" height="200px" alt="">
       </div>
@@ -180,7 +180,7 @@
     </div>
 
   
-    <div class="card product-card" data-gender="men" data-price="1.5m">
+    <div class="card product-card" data-gender="men" data-price="1.5m" data-item="shari">
       <div class="image">
         <img src="/images/card4.png" width="200px" height="200px" alt="">
       </div>
@@ -189,7 +189,7 @@
       <button class="details-button">Details</button>
     </div>
 
-    <div class="card product-card" data-gender="women" data-price="1m">
+    <div class="card product-card" data-gender="women" data-price="1m" data-item="sumatra utara">
       <div class="image">
         <img src="/images/card5.png" width="200px" height="200px" alt="">
       </div>
@@ -199,7 +199,7 @@
     </div>
 
   
-    <div class="card product-card" data-gender="women" data-price="1m">
+    <div class="card product-card" data-gender="women" data-price="1m" data-item="lampung">
       <div class="image">
         <img src="/images/card6.png" width="200px" height="200px" alt="">
       </div>
@@ -209,7 +209,7 @@
     </div>
 
    
-    <div class="card product-card" data-gender="men" data-price="1m">
+    <div class="card product-card" data-gender="men" data-price="1m" data-item="jawa barat">
       <div class="image">
         <img src="/images/card7.png" width="200px" height="200px" alt="">
       </div>
@@ -219,7 +219,7 @@
     </div>
 
   
-    <div class="card product-card" data-gender="men" data-price="1m">
+    <div class="card product-card" data-gender="men" data-price="1m" data-item="sumatra barat">
       <div class="image">
         <img src="/images/card8.png" width="200px" height="200px" alt="">
       </div>
@@ -228,7 +228,7 @@
       <button class="details-button">Details</button>
     </div>
 
-    <div class="card product-card" data-gender="women" data-price="2m">
+    <div class="card product-card" data-gender="women" data-price="2m" data-item="sulawesi">
       <div class="image">
         <img src="/images/card9.png" width="200px" height="200px" alt="">
       </div>
@@ -238,7 +238,7 @@
     </div>
 
   
-    <div class="card product-card" data-gender="women" data-price="2m">
+    <div class="card product-card" data-gender="women" data-price="2m" data-item="banten">
       <div class="image">
         <img src="/images/card10.png" width="200px" height="200px" alt="">
       </div>
@@ -248,7 +248,7 @@
     </div>
 
    
-    <div class="card product-card" data-gender="women" data-price="1.5m">
+    <div class="card product-card" data-gender="women" data-price="1.5m" data-item="minang">
       <div class="image">
         <img src="/images/card11.png" width="200px" height="200px" alt="">
       </div>
@@ -258,7 +258,7 @@
     </div>
 
   
-    <div class="card product-card" data-gender="women" data-price="1.5m">
+    <div class="card product-card" data-gender="women" data-price="1.5m" data-item="dayak">
       <div class="image">
         <img src="/images/card12.png" width="200px" height="200px" alt="">
       </div>
@@ -267,7 +267,7 @@
       <button class="details-button">Details</button>
     </div>
 
-    <div class="card product-card" data-gender="men" data-price="1.5m">
+    <div class="card product-card" data-gender="men" data-price="1.5m" data-item="kalimantan barat">
       <div class="image">
         <img src="/images/card13.png" width="200px" height="200px" alt="">
       </div>
@@ -277,7 +277,7 @@
     </div>
 
   
-    <div class="card product-card" data-gender="men" data-price="1m">
+    <div class="card product-card" data-gender="men" data-price="1m" data-item="batak">
       <div class="image">
         <img src="/images/card14.png" width="200px" height="200px" alt="">
       </div>
@@ -287,7 +287,7 @@
     </div>
 
    
-    <div class="card product-card" data-gender="men" data-price="1.5m">
+    <div class="card product-card" data-gender="men" data-price="1.5m" data-item="sulawesi2">
       <div class="image">
         <img src="/images/card15.png" width="200px" height="200px" alt="">
       </div>
@@ -297,7 +297,7 @@
     </div>
 
   
-    <div class="card product-card" data-gender="men" data-price="1.5m">
+    <div class="card product-card" data-gender="men" data-price="1.5m" data-item="sunda">
       <div class="image">
         <img src="/images/card16.png" width="200px" height="200px" alt="">
       </div>

@@ -8,19 +8,8 @@
     <div class="row p-4">
         <div class="col-7">
             <div class="row">
-                <div class="col-5">
-                    <img src="{{ url('images/model-Bali.png')}}" class="w-100">
-                </div>
-                <div class="col-4 pt-1">
-                    <div class="row">
-                        <img src="{{ url('images/model-Bali1.png')}}" class="w-50 pb-2">
-                    </div>
-                    <div class="row">
-                        <img src="{{ url('images/model-Bali2.png')}}" class="w-75 pb-2">
-                    </div>
-                    <div class="row">
-                        <img src="{{ url('images/model-Bali3.png')}}" class="w-50">
-                    </div>
+                <div class="col-12 text-center">
+                    <img src="{{ url('images/' . $details['image']) }}" class="w-50 img-fluid">
                 </div>
             </div>
         </div>
@@ -28,25 +17,13 @@
             <div class="container">
                 <div class="row">
                     <h1 class="sy">
-                        Balinese : Shari
+                        {{ $details['name'] }}
                     </h1>
                 </div>
                 <div class="row">
                     <p class="qs">
-                        The traditional attire from the island of Bali, Indonesia,
-                        known as "Shari" or "Sari," is a captivating cultural ensemble.
-                        With its vibrant colors and distinctive artistic motifs,
-                        Shari Bali creates a striking representation of Balinese culture.
-                        The combination of the intricately designed kebaya and gracefully
-                        draped selendang imparts an elegant appearance,
-                        while the long sarung skirt and accessories like bracelets
-                        and small crowns add a touch of refinement. 
-                        This attire transcends mere fashion; 
-                        it carries profound cultural significance, 
-                        being worn during traditional ceremonies, religious rituals, 
-                        and special occasions such as weddings. 
-                        Shari Bali serves as a potent symbol of the rich cultural identity 
-                        and mesmerizing artistic heritage of the Balinese society.
+
+                        {{ $details['description'] }}
                     </p>
                 </div>
                 <div class="row">
@@ -78,11 +55,11 @@
                 </div>
                 <div class="row">
                     <button>
-                        Male
+                        {{ $details['gender'] }}
                     </button>
                 </div>
                 <div class="row">
-                    Rp 3.000.000
+                    {{ $details['price'] }}
                 </div>
                 <div class="row">
                     <button>

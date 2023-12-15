@@ -52,5 +52,12 @@ function updateCardVisibility() {
       $(".sidebar").toggleClass("active");
     });
 
+    $(document).ready(function () {
+      $('.details-button').click(function () {
+          var item = $(this).closest('.product-card').data('item');
+          window.location.href = '/itempage/' + item;
+      });
+  });
+
    
     updateCardVisibility();
