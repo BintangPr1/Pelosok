@@ -28,7 +28,20 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('/mainpage', [MainController::class, 'index'])->name('main');
 
-    Route::get('/itempage/{item}', [ItemController::class, 'show'])->name('item');
+    Route::get('/itempage/{item}', [MainController::class, 'showItem'])->name('item');
+
+    Route::get('/cartpage', [MainController::class, 'cart'])->name('cart');
+
+    Route::get('buy-now/{product_id}',[MainController::class, 'buyNow'])->name('buy-now');
+
+    Route::get('add-to-cart/{product_id}',[MainController::class, 'addToCart'])->name('add-to-cart');
+
+    Route::get('qty-increment/{rowId}', [MainController::class, 'qtyIncrement'])->name('qty-increment');
+    Route::get('qty-decrement/{rowId}', [MainController::class, 'qtyDecrement'])->name('qty-decrement');
+    Route::get('remove-product/{rowId}', [MainController::class, 'removeProduct'])->name('remove-product');
+
+    
+
 
     Route::get('/profilepage', [ProfileController::class, 'index'])->name('profile');
 

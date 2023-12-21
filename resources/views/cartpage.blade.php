@@ -4,110 +4,126 @@
 
 @section('content')
 
-<h3 class="text-center mt-5">Cart (3)</h3>
+<div class="py-12">
+  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <section class="h-100 gradient-custom">
+          <div class="container py-5">
+              <div class="row d-flex justify-content-center my-4">
+                  <div class="col-md-8">
+                      @if ($message = Session::get('success'))
+                          <div class="alert alert-success alert-block">
+                              <button type="button" class="close" data-dismiss="alert">×</button>
+                                  <strong>{{ $message }}</strong>
+                          </div>
+                      @endif
+
+                      <div class="card mb-4">
+                          <div class="card-header py-3">
+                              <h5 class="mb-0">Cart - 2 items</h5>
+                          </div>
+                          <div class="card-body">
+                              @foreach (Cart::content() as $item)
+                              <!-- Single item -->
+                              <div class="row">
+                                  <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                      <!-- Image -->
+                                      <div class="bg-image hover-overlay hover-zoom ripple rounded"
+                                          data-mdb-ripple-color="light">
+                                          <img src="{{asset($item->options->image)}}"
+                                              class="w-100" />
+                                          <a href="#!">
+                                              <div class="mask"
+                                                  style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                          </a>
+                                      </div>
+                                      <!-- Image -->
+                                  </div>
+
+                                  <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                      <!-- Data -->
+                                      <p><strong>{{$item->name}}</strong></p>
+                                      <p>Size: M</p>
+
+                                      <a href="{{route('remove-product', $item->rowId)}}" class="btn btn-danger btn-sm mb-2 mt-3">
+                                          remove
+                                      </a>
+                                      <!-- Data -->
+                                  </div>
+
+                                  <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                      <!-- Quantity -->
+                                      <div class="d-flex mb-4" style="max-width: 300px">
+                                          <a href="{{route('qty-decrement', $item->rowId)}}" class="btn btn-primary me-2">
+                                              &#8722;
+                                          </a>
+
+                                          <div class="form-outline">
+                                              <input id="form1" min="0" name="quantity" value="{{$item->qty}}"
+                                                  type="number" class="form-control" />
+                                          </div>
+
+                                          <a href="{{route('qty-increment', $item->rowId)}}" class="btn btn-primary  ms-2">
+                                              &#43;
+                                          </a>
+                                      </div>
+                                      <!-- Quantity -->
+
+                                      <!-- Price -->
+                                      <p class="text-start text-md-center">
+                                          <strong>Rp {{$item->price}}</strong>
+                                      </p>
+                                      <!-- Price -->
+                                  </div>
+
+                              </div>
+                              <!-- Single item -->
+                              <hr class="my-4" />
+                              @endforeach
 
 
-
-    <div class="card mb-5 mx-5" style="max-width: 700px;">
-    <div class="row g-0">
-        <div class="col-md-4">
-        <img src="./images/card4.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-        <div class="card-body">
-            <h5 class="sy"></h5>
-            <p class="card-text">Size : M</p>
-            <a href="" class="text-reset link-secondary position-absolute bottom-0 mb-2">Remove Item</a>
-            <h5 class="fw-semibold position-absolute bottom-0 end-0">Rp 3.000.000,00</h5>
-        </div>
-        </div>
-    </div>
-    </div>
+                          </div>
+                      </div>
 
 
-    <div class="card mx-5 top-0 start-50" style="max-width: 950px; height: 350px; margin-top: -380px">
-    <div class="row g-0">
-        <div class="col-md-8">
-        <div class="card-body">
-            <h5>Summary</h5>
-            <div>
-              <p class="card-text position-absolute bottom-0 start-0 mx-4 mb-5">Subtotal</p>
-              <h5 class="fw-semibold position-absolute bottom-0 end-0 mx-4 mb-5 ">Rp 2.500.000,00</h5>
-              <p class="card-text position-absolute bottom-0 start-0 mx-4 mb-4">Shipping</p>
-              <h5 class="fw-semibold position-absolute bottom-0 end-0 mx-4 mb-4">Rp 100.000,00</h5>
-              <p class="card-text fw-semibold position-absolute bottom-0 start-0 mx-4 mb-0">Total</p>
-              <h5 class="fw-semibold position-absolute bottom-0 end-0 mx-4 mb-0">Rp 2.600.000,00</h5>
-            </div>
-        </div>
-        </div>
-    </div>
-    <a href="#" class="btn btn-outline-dark col-4 position-absolute top-100 start-50 translate-middle-x mt-3">Checkout</a>
-    </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card mb-4">
+                          <div class="card-header py-3">
+                              <h5 class="mb-0">Summary</h5>
+                          </div>
+                          <div class="card-body">
+                              <ul class="list-group list-group-flush">
+                                  <li
+                                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                      Products
+                                      <span>Rp 2.000.000</span>
+                                  </li>
+                                  <li
+                                      class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                      Shipping
+                                      <span>Gratis</span>
+                                  </li>
+                                  <li
+                                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                      <div>
+                                          <strong>Total amount</strong>
     
-    
+                                      </div>
+                                      <span><strong>Rp 2.000.000</strong></span>
+                                  </li>
+                              </ul>
 
-    
-<!-- <div class="card mb-3 mx-5" style="max-width: 700px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="./images/card4.png" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="sy">Balinese : Shari</h5>
-        <p class="card-text">Size : M</p>
-        <a href="" class="text-reset link-secondary position-absolute bottom-0 mb-2">Remove Item</a>
-        <h5 class="fw-semibold position-absolute bottom-0 end-0">Rp 3.000.000,00</h5>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="card mb-3 position-absolute top-50 start-50" style="max-width: 700px;">
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div> -->
-
-
-
-<div class="card mb-3 mx-5" style="max-width: 700px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="./images/card16.png" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="sy">Sunda : Salontreng</h5>
-        <p class="card-text">Size : L</p>
-        <a href="" class="text-reset link-secondary position-absolute bottom-0 mb-2">Remove Item</a>
-        <h5 class="fw-semibold position-absolute bottom-0 end-0">Rp 2.100.000,00</h5>
-      </div>
-    </div>
+                              <button class="btn btn-success">
+                                  Go to checkout
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
   </div>
 </div>
-
-<div class="card mb-3 mx-5" style="max-width: 700px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="./images/card8.png" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="sy">Javanese : Dhodot</h5>
-        <p class="card-text">Size : XL</p>
-        <a href="" class="text-reset link-secondary position-absolute bottom-0 mb-2">Remove Item</a>
-        <h5 class="fw-semibold position-absolute bottom-0 end-0">Rp 2.500.000,00</h5>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
 
 
 @endsection

@@ -10,11 +10,7 @@ class ItemController extends Controller
 {
     public function show($item)
 {
-    // Here, $item will contain the value passed in the URL
-    // You can use this value to fetch details about the selected item
-    // For simplicity, you can use a switch statement or a lookup in your database
 
-    // Example using a switch statement:
     switch ($item) {
         case 'palembang':
             $details = [
@@ -23,7 +19,7 @@ class ItemController extends Controller
                 'price' => '1.500.000',
                 'gender' => 'Male',
                 'description' => 'Description for Palembang...',
-                // Add other details as needed
+                
             ];
             break;
 
@@ -41,7 +37,7 @@ class ItemController extends Controller
                  profound cultural significance, worn during ceremonies, religious rituals, and 
                  special events. It symbolizes the rich cultural identity and mesmerizing artistic heritage of Balinese society.',
                 
-                // Add other details as needed
+          
             ];
             break;
 
@@ -61,7 +57,7 @@ class ItemController extends Controller
                  worn during ceremonies, cultural events, and special occasions. It stands as 
                  a potent symbol of Jambi cultural identity and artistic legacy, much like the Shari Bali of Balinese culture.',
                     
-                    // Add other details as needed
+                   
             ];
             break;
 
@@ -73,7 +69,7 @@ class ItemController extends Controller
                 'gender' => 'Male',
                 'description' => 'Description for Bali...',
                         
-                        // Add other details as needed
+                     
             ];
             break;
 
@@ -226,10 +222,10 @@ class ItemController extends Controller
         break;
 
             
-        // Add more cases for other items
+     
 
         default:
-            abort(404); // If the item is not found, return a 404 error
+            abort(404); 
     }
 
     return view('itempage', compact('details'));

@@ -9,7 +9,7 @@
         <div class="col-7">
             <div class="row">
                 <div class="col-12 text-center">
-                    <img src="{{ url('images/' . $details['image']) }}" class="w-50 img-fluid">
+                    <img src="{{ asset($item->image) }}" class="w-50 img-fluid">
                 </div>
             </div>
         </div>
@@ -17,33 +17,32 @@
             <div class="container">
                 <div class="row">
                     <h1 class="sy">
-                        {{ $details['name'] }}
+                        {{ $item->name }}
                     </h1>
                 </div>
                 <div class="row">
                     <p class="qs">
-
-                        {{ $details['description'] }}
+                        {{ $item->description }}
                     </p>
                 </div>
-                <div class="row">
+                <div class="row me-5">
                     <div class="col">
-                        <button class="qs btn-circle">
+                        <button class="btn qs-outline fw-bold rounded-circle">
                             S
                         </button>
                     </div>
                     <div class="col">
-                        <button>
+                        <button class="btn qs-outline fw-bold rounded-circle">
                             M
                         </button>
                     </div>
                     <div class="col">
-                        <button>
+                        <button class="btn qs-outline fw-bold rounded-circle">
                             L
                         </button>
                     </div>
                     <div class="col">
-                        <button>
+                        <button class="btn qs-outline fw-bold rounded-circle">
                             XL
                         </button>
                     </div>
@@ -54,17 +53,19 @@
                     </p>
                 </div>
                 <div class="row">
-                    <button>
-                        {{ $details['gender'] }}
+                    <button class="btn qs-outline fw-bold rounded-pill mb-5">
+                        {{ $item->gender }}
                     </button>
                 </div>
-                <div class="row">
-                    {{ $details['price'] }}
+                <div class="row fw-semibold fs-5">
+                    {{ number_format($item->price, 0, ',', '.')}}
                 </div>
-                <div class="row">
-                    <button>
-                        Buy Now
-                    </button>
+                <div class="row" class="btn-buy">
+                    <a href="{{ route('buy-now', $item->id) }}">
+                        <button class="btn qs-outline fw-bold rounded-pill">
+                            Buy Now
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -72,7 +73,7 @@
     <div class="row pt-5 pb-5">
         <div class="col-5"></div>
         <div class="col-2">
-            <p class="qs">
+            <p class="qs text-center fw-semibold">
                 What People Say?
             </p>
         </div>
@@ -123,7 +124,7 @@
     <div class="row pt-5 pb-5">
         <div class="col-5"></div>
         <div class="col-2">
-            <p class="qs">
+            <p class="qs text-center fw-semibold">
                 You Might Also Like
             </p>
         </div>
@@ -131,7 +132,7 @@
     </div>
     <section class="container p-5 justify-content-center">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2 mx-5">
                 <div class="row">
                     <img src="{{ url('images/A.png')}}" class="w-75">
                 </div>
@@ -146,12 +147,12 @@
                     </p>
                 </div>
                 <div class="row qs">
-                    <button>
+                    <button class="btn qs-outline fw-bold rounded-pill">
                         Detail
                     </button>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-2 mx-5">
                 <div class="row">
                     <img src="{{ url('images/B.png')}}" class="w-75">
                 </div>
@@ -166,12 +167,12 @@
                     </p>
                 </div>
                 <div class="row qs">
-                    <button>
+                    <button class="btn qs-outline fw-bold rounded-pill">
                         Detail
                     </button>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-2 mx-5">
                 <div class="row">
                     <img src="{{ url('images/C.png')}}" class="w-75">
                 </div>
@@ -186,12 +187,12 @@
                     </p>
                 </div>
                 <div class="row qs">
-                    <button>
+                    <button class="btn qs-outline fw-bold rounded-pill">
                         Detail
                     </button>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-2 mx-5">
                 <div class="row">
                     <img src="{{ url('images/D.png')}}" class="w-75">
                 </div>
@@ -206,7 +207,7 @@
                     </p>
                 </div>
                 <div class="row qs">
-                    <button>
+                    <button class="btn qs-outline fw-bold rounded-pill">
                         Detail
                     </button>
                 </div>
